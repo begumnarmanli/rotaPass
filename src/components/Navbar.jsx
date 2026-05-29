@@ -36,6 +36,8 @@ function Navbar() {
           <img
             src={logo}
             alt="RotaPass"
+            width="300"
+            height="200"
             className="h-20 md:h-24 lg:h-28 w-auto object-contain"
           />
         </Link>

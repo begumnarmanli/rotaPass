@@ -44,11 +44,19 @@ export default function HomePage() {
           >
             <img
               src={post.image}
+              srcSet={`
+    ${post.image.replace(".webp", "-800.webp")} 800w,
+    ${post.image.replace(".webp", "-1200.webp")} 1200w,
+    ${post.image} 1920w
+  `}
+              sizes="100vw"
               alt={post.title[lang]}
               width="1920"
               height="1080"
+              fetchPriority={i === 0 ? "high" : "low"}
+              loading={i === 0 ? "eager" : "lazy"}
+              decoding={i === 0 ? "sync" : "async"}
               className="w-full h-full object-cover object-top"
-              style={{ aspectRatio: "16/9" }}
             />
           </div>
         ))}

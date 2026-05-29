@@ -42,6 +42,8 @@ function FeaturedCard({ post }) {
               alt={post.title[lang]}
               width="600"
               height="400"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover opacity-100 transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div
