@@ -32,12 +32,12 @@ function Navbar() {
       }`}
     >
       <div className="w-full flex items-center justify-between px-4! md:px-6! lg:px-12!">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" aria-label="Anasayfaya dön">
           <img
             src={logo}
             alt="RotaPass"
-            width="300"
-            height="200"
+            width="150"
+            height="100"
             className="h-20 md:h-24 lg:h-28 w-auto object-contain"
           />
         </Link>
