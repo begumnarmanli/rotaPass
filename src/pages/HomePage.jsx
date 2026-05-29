@@ -44,9 +44,11 @@ export default function HomePage() {
           >
             <img
               src={post.image}
-              alt=""
+              alt={post.title[lang]}
+              width="1920"
+              height="1080"
               className="w-full h-full object-cover object-top"
-              style={{ filter: "brightness(1.5)" }}
+              style={{ aspectRatio: "16/9" }}
             />
           </div>
         ))}
@@ -147,6 +149,7 @@ export default function HomePage() {
             <button
               key={i}
               onClick={() => setActiveHero(i)}
+              aria-label={`Slayt ${i + 1}'e git`}
               style={{
                 width: 2,
                 height: i === activeHero ? 28 : 14,

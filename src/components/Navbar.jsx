@@ -66,12 +66,14 @@ function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white p-1"
+            aria-label="Menüyü aç/kapat"
           >
             <svg
               className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"

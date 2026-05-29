@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
-      <Suspense fallback={<div />}>
+      <Suspense fallback={<div className="h-screen bg-[#080808]" />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
