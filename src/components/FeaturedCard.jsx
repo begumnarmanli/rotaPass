@@ -21,6 +21,7 @@ function FeaturedCard({ post }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
+      aria-label={`${post.title[lang]} yazısını oku`}
       className="flex justify-center group w-full relative"
     >
       <div
@@ -39,6 +40,8 @@ function FeaturedCard({ post }) {
             <img
               src={post.image}
               alt={post.title[lang]}
+              width="600"
+              height="400"
               className="w-full h-full object-cover opacity-100 transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div

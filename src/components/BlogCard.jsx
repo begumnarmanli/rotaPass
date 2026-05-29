@@ -11,6 +11,7 @@ function BlogCard({ post }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
+      aria-label={`${post.title[lang]} yazısını oku`}
       className="flex justify-center group w-full relative"
     >
       <div
@@ -30,6 +31,8 @@ function BlogCard({ post }) {
             <img
               src={post.image}
               alt={post.title[lang]}
+              width="400"
+              height="300"
               className="w-full h-full object-cover opacity-100 transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div
