@@ -39,6 +39,12 @@ function FeaturedCard({ post }) {
           >
             <img
               src={post.image}
+              srcSet={`
+    ${post.image.replace(".webp", "-800.webp")} 800w,
+    ${post.image.replace(".webp", "-1200.webp")} 1200w,
+    ${post.image} 1920w
+  `}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt={post.title[lang]}
               width="600"
               height="400"

@@ -29,14 +29,20 @@ function BlogCard({ post }) {
             style={{ zIndex: 0 }}
           >
             <img
-              src={post.image}
-              alt={post.title[lang]}
-              width="400"
-              height="300"
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover opacity-100 transition-transform duration-500 ease-out group-hover:scale-105"
-            />
+  src={post.image}
+  srcSet={`
+    ${post.image.replace(".webp", "-800.webp")} 800w,
+    ${post.image.replace(".webp", "-1200.webp")} 1200w,
+    ${post.image} 1920w
+  `}
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  alt={post.title[lang]}
+  width="400"
+  height="300"
+  loading="lazy"
+  decoding="async"
+  className="w-full h-full object-cover opacity-100 transition-transform duration-700 ease-out group-hover:scale-105"
+/>
             <div
               className="absolute inset-0"
               style={{
