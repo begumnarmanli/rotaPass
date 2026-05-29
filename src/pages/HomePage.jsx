@@ -33,28 +33,25 @@ export default function HomePage() {
   return (
     <main style={{ background: "#080808", color: "#fff" }}>
       <section className="relative w-full h-[50vh] md:h-[70vh] lg:h-screen overflow-hidden">
-        {heroPost.map((post, i) => (
-          <div
-            key={post.id}
-            className="absolute inset-0"
-            style={{
-              transition: "opacity 1.2s ease",
-              opacity: i === activeHero ? 1 : 0,
-            }}
-          >
-            <img
-              src={post.image}
-              alt={post.title[lang]}
-              width="1920"
-              height="1080"
-              fetchPriority={i === 0 ? "high" : "low"}
-              loading={i === 0 ? "eager" : "lazy"}
-              decoding={i === 0 ? "sync" : "async"}
-              className="w-full h-full object-cover object-top"
-              style={{ aspectRatio: "16 / 9" }}
-            />
-          </div>
-        ))}
+        <div
+          key={active?.id}
+          className="absolute inset-0"
+          style={{
+            transition: "opacity 0.8s ease",
+          }}
+        >
+          <img
+            src={active?.image}
+            alt={active?.title[lang]}
+            width="1920"
+            height="1080"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover object-top"
+            style={{ aspectRatio: "16 / 9" }}
+          />
+        </div>
 
         <div
           className="absolute inset-0"
