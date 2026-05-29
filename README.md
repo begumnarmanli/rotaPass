@@ -17,11 +17,18 @@ RotaPass, dünyanın dört bir yanındaki şehirlere ait kişisel seyahat rehber
 
 ## 📸 Ekran Görüntüleri
 
+<div align="center">
+
+### 🏠 Ana Sayfa
 <img src="screenshots/home.png" alt="Ana Sayfa" style="margin-bottom: 24px" />
 
+### 📝 Blog Sayfası
 <img src="screenshots/blog.png" alt="Blog" style="margin-bottom: 24px" />
 
+### 🔍 Blog Detay Sayfası
 <img src="screenshots/details.png" alt="Blog Detay" />
+
+</div>
 
 ---
 
