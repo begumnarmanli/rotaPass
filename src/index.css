@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-card: #151515;
+  --color-border: #222222;
+  --color-text: #ffffff;
+  --color-text-muted: #888888;
+  --color-primary: #a855f7;
+  --color-primary-end: #40c9ff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.card {
+  position: relative;
+  background-color: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 9px;
+  background: linear-gradient(
+    -45deg,
+    var(--color-primary) 0%,
+    var(--color-primary-end) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    -45deg,
+    var(--color-primary) 0%,
+    var(--color-primary-end) 100%
+  );
+  transform: scale(0.95);
+  filter: blur(20px);
+  opacity: 0;
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+  filter: blur(28px);
+}
